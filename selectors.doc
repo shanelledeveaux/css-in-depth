@@ -1,0 +1,66 @@
+Basic Selectors
+    #myID - ID
+    .myClass - class
+    li - tag name
+
+Relational Selectors
+    ul li 
+        Decendant Selector
+        matches nested <li>
+        
+    ol > li
+        child Selector
+        matches <li> in <ol> but not nested ul
+    
+    li.myClass + li
+        adjacent sibling
+    
+    NEW!!!
+    li.myClass ~ li
+        general sibling Selector
+        matches later siblings, but not nested.
+
+ATTRUBUTE Selectors
+
+element[attribute]
+    Select elements containing the named attribute
+
+OLDER ATTRUBUTE Selectors
+    E[attr]
+        element E that has the attribute attr with any value
+    E[attr='val']
+        element E that has the attribute attr with the exact, case-sensitive if attribute is case sensitive, value val.
+
+    E[attr|=val]
+        Element E whose attribute attr has a value val or begins with val- ('val' plus "-")
+
+    E[attr~=val]
+        Element E whose attribute attr has within its value the space separated full word val.
+
+    E[attr^=val]
+        Element E whose attribute attr starts with the value val.
+
+    E[attr$=val]
+        Element E whose attribute attr ends in val
+    
+    E[attr*=val]
+        Element E whose attribute attr matches val anywhere within the attribute. Similar to E[attr~=val] above except the val can be a part of a word.
+
+UI pseudo-classes
+
+    Based on current state of UI
+        :enabled
+        :disabled
+        :checked
+
+Form related UI pseudo-classes
+
+    :valid
+    :invalid
+    :required
+    :optional
+    :in-range
+    :out-of-range
+    :read-only
+    :read-write
+    :default
